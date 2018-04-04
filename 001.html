@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prueba Curso</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="0_assets/curso/css/style.css">
+    
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row content">
+        
+        
+        <div class="col-sm-3 sidenav d-none">
+          <h4>Curso</h4>
+          
+          
+          <ul class="nav nav-pills nav-stacked lista">
+            <li data-index="0" class="active" onclick="iframe('b001.html',this)"><a href="#section1">Introducción</a></li>
+            <li data-index="1" onclick="iframe('b002.html',this)"><a href="#">Contenidos</a></li>
+            <li data-index="2" onclick="iframe('b003.html',this)"><a href="#">Tema 1</a></li>
+            <li data-index="3" onclick="iframe('b004.html',this)"><a href="#">Tema 2</a></li>
+          </ul>
+          
+          <br>
+        </div>
+        
+        <div  class="navbar col-sm-9">
+          <button type="button" class="btn btn-primary btn-default btn-sm" onclick="oculto(this)">
+          <a href="#" onclick=""></a>
+          <span class="glyphicon glyphicon-triangle-left"></span>
+          
+          </button>
+          
+          
+          <h4><small></small></h4><br>
+          
+          <iframe class="embed-ersponsive-item" src="" scrolling="auto" style="overflow-y:hidden" frameborder="0">
+          </iframe>
+          <br> 
+        </div>
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  <footer class="container-fluid">
+    <p> <ul class="pager">
+      <li class="anterior" onclick="pagina(this)"><a href="#">Anterior</a></li>
+      <li class="siguiente" onclick="pagina(this)"><a href="#">Siguiente</a></li>
+    </ul>
+  </p>
+</footer>
+<script src="0_assets/curso/js/funciones.js" type="text/javascript" charset="utf-8" defer></script>
+</body>
+</html>
