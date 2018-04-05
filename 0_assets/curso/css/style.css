@@ -36,7 +36,7 @@
     width: 100%; 
     min-height: 600px;
     padding-top: 20px;
-    position: absolute;
+    
     overflow-y: hidden;
     overflow-x: hidden;
     scroll-behavior: [auto | smooth];
