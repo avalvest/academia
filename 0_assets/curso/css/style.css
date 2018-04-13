@@ -4,9 +4,11 @@
     
     /* Set gray background color and 100% height */
     .sidenav {
+      display:block;
       background-color: #e1f1f1;
       height: 100%;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: opacity 0.80s ,width 1s;
     }
     
     /* Set black background color, white text and some padding */
@@ -28,12 +30,17 @@
     }
 
     .oculto{
-      display: none;
+       transition: opacity 0.80s ,width 1s;
+       
+      width:0;
+      opacity:0;
+      /*display: none;*/
 
-    }
+}
 
     iframe {
-    width: 100%; 
+    min-width: 800px; 
+    width: 100%;
     min-height: 600px;
     padding-top: 20px;
     
@@ -41,21 +48,50 @@
     overflow-x: hidden;
     scroll-behavior: [auto | smooth];
     display: inline-block;
+  
 
     }
-
-    .zoomin{
-
-    }
-
-    .zoomout{}
-
+/*.row div + div {margin-right: 0;}*/
+  
     #btnmaszoom
     #btnmenoszoom
     #barratop
     .navbar {
-      background-color:#e1f1f1;
-      color: #e1f1f1
-      height: 15px;
+      background-color:#ffffff;
+      color: #e1f1f1;
+      height: 16px;
       border: none;
      }
+
+
+/*//////////////////////////////////////////////////////////////////7*/
+
+/* #sidebar-wrapper {
+    margin-right: -250px;
+    right: 0;
+    width: 250px;
+    background: rgb(0,0,0);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.5s ease-in 0s;
+    -webkit-transition: all 0.5s ease-in 0s;
+    -moz-transition: all 0.5s ease-in 0s;
+    -ms-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+  }*/
+
+  .mantener{
+  
+  /*display: block;*/
+  
+  /*word-break: none;*/
+/*  word-wrap: break-word;*/
+  white-space: nowrap !important;
+  
+}
+
+.expandir{
+  transition: opacity 0.80s ,width 1s;
+}
