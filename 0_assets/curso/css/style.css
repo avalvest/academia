@@ -9,6 +9,7 @@
       height: 100%;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: opacity 0.80s ,width 1s;
+
     }
     
     /* Set black background color, white text and some padding */
@@ -18,7 +19,9 @@
       color: green;
       padding: 10px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
     }
+
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
@@ -47,7 +50,9 @@
     overflow-y: hidden;
     overflow-x: hidden;
     scroll-behavior: [auto | smooth];
-    display: inline-block;
+    margin-left: -1px;
+    /*display: inline-block;*/
+
   
 
     }
@@ -95,3 +100,4 @@
 .expandir{
   transition: opacity 0.80s ,width 1s;
 }
+

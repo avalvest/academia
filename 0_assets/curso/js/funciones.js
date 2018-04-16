@@ -57,20 +57,15 @@ function activo(element) {
 window.onload = function() {
     var lista = document.getElementsByTagName("li")
 
-    // if (count == 0) {
-    //    console.log(count)
-    //     count++;
-    //     console.log(count)
-    // } else {
-    	if (lista.length >0)
-    	{
+
+    if (lista.length > 0) {
         for (var i = 0; i < lista.length; i++) {
 
             lista.item(i).addEventListener('click', activo)
         }
-    // }
-    lista.item(0).click();
-}
+        // }
+        lista.item(0).click();
+    }
 }
 
 
@@ -93,15 +88,29 @@ function iframe(archivo, element) {
 
 
 function pagina(element) {
+    console.log(p.getpos())
+    var lista = document.getElementsByTagName("li")
     if (element.classList.contains("anterior")) {
         // p.getpos().previousElementSibling.click();
 
-        p.getpos().previousElementSibling.click();
 
+        if (p.getpos().previousElementSibling == null) {
+           element.getElementsByClassName("anterior").disabled = false;
+        } else {
+            element.getElementsByClassName("anterior").disabled = true;
+            p.getpos().previousElementSibling.click();
+
+        }
     }
     if (element.classList.contains("siguiente")) {
-        p.getpos().nextElementSibling.click();
+        if (p.getpos().nextElementSibling == null) {
+            element.getElementsByClassName("siguiente").disabled = false;
+        } else {
+            element.getElementsByClassName("siguiente").disabled = true;
+            p.getpos().nextElementSibling.click();
+            // console.log(p.getpos().getAttribute("data-index") + " siguiente 2else")
 
+        }
     }
 }
 
