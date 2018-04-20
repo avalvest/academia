@@ -95,24 +95,39 @@ function pagina(element) {
 
 
         if (p.getpos().previousElementSibling == null) {
-           element.getElementsByClassName("anterior").disabled = false;
+           document.getElementsByClassName("anterior").disabled = false;
         } else {
-            element.getElementsByClassName("anterior").disabled = true;
+            document.getElementsByClassName("anterior").disabled = true;
             p.getpos().previousElementSibling.click();
 
         }
     }
     if (element.classList.contains("siguiente")) {
         if (p.getpos().nextElementSibling == null) {
-            element.getElementsByClassName("siguiente").disabled = false;
+            document.getElementsByClassName("siguiente").disabled = false;
         } else {
-            element.getElementsByClassName("siguiente").disabled = true;
+            document.getElementsByClassName("siguiente").disabled = true;
             p.getpos().nextElementSibling.click();
             // console.log(p.getpos().getAttribute("data-index") + " siguiente 2else")
 
         }
     }
 }
+////
+// function pagina(element){
+// 	var lista= document.getElementsByTagName("li")
+// if (p.getpos().previousElementSibling == null)
+	// element.getElementsByClassName("anterior").setAttribute(" disabled" = "")
+
+
+
+
+
+
+
+
+
+
 
 // function pagina(element) {
 //     // console.log(p.getpos())
