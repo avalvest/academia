@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio de autoevaluación</title>
+    
+  
+  <link type="text/css" rel="stylesheet" href="0_assets/curso/css/VerdaderoFalso.css" />
+  <link type="text/css" rel="stylesheet" href="0_assets/curso/css/estiloRadioMultiopcion.css" />
+  <link type="text/css" rel='stylesheet' href='0_assets/curso/css/site.min.css' />
+  <link type="text/css" rel='stylesheet' href='0_assets/libs/css/bootstrap.css' />
+  <link type="text/css" rel='stylesheet' href='0_assets/libs/css/bootstrap.min.css' />
+  <link type="text/css" rel='stylesheet' href='0_assets/libs/css/bootstrap-extend.min.css' />
+  <link type="text/css" rel="stylesheet" href="0_assets/curso/css/leafbox.css" />
+  <link type="text/css" rel="stylesheet" href="0_assets/player/css/sweetalert.css" />
+  <link type="text/css" rel="stylesheet" href="0_assets/curso/css/style_definitivo.css" />
+
+  <script type="text/javascript" src="0_assets/libs/js/jquery.js"></script>
+  <!-- <script type="text/javascript" src="../0_assets/curso/js/certificadoReady.js"></script> -->
+  <script type="text/javascript" src="0_assets/libs/js/bootstrap.js"></script>
+  <script type="text/javascript" src="0_assets/curso/js/carga_funciones.js"></script>
+  <script type="text/javascript" src="0_assets/libs/js/jQuery.print.js"></script>
+  <script type="text/javascript" src="0_assets/curso/js/scroll.js"></script>
+  <script type="text/javascript" src="0_assets/player/js/sweetalert.min.js"></script>
+
+<style>   
+  .casillaInput{font-size:14px; height:28px !important; width:28px !important; margin-right: 0px !important; border:solid 1px; border-color: #1cae97; background: #eee; float:left;
+  font-weight: bold; text-align:center; padding-top:4px; padding-bottom:0px; cursor:pointer; text-transform: uppercase;}   
+  .casillaNoInput{font-size:14px; height:28px !important; width:28px !important; border:solid 1px; border-color: #1cae97; background: whiteSmoke; float:left; text-transform: uppercase;
+  font-weight: bold; text-align:center; padding-top:4px; cursor:pointer}
+  .casillaVacia{font-size:14px; height:28px; width:28px; float:left; font-weight: bold; text-align:center; text-transform: uppercase; padding-top:4px;}
+</style> 
+
+</head>
+<body>
+    <div id="contLoader" style="display:none" class="contenedor-loader vertical-align">
+        <div id="contLoaderSon" class="loader-default loader vertical-align-middle" data-type="default"></div>
+    </div>
+
+<div class="diapositiva">
+
+
+          <div class="menu">
+
+              <div class="titulo">Actividad autoevaluable</div>
+          </div>
+
+<!-- centro -->
+  <div class="centro">
+    <div class="centro-aux">
+
+
+<div class="contenido">
+
+                
+
+<div class="clear"></div>
+
+
+
+
+<div class="row actividades">
+
+                        <div class="col-xs-12">
+                            <div class="tile instrucciones">
+                                <h3 class="tile-title">Actividad de seleccionar</h3>
+                                <p style="margin: 2px 0px; margin-bottom: 2px;">Marca los elementos del EPI que veas en la imagen: </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row actividades">
+
+                        <div class="col-xs-2">
+                            <div class="tile noImprimir imgAct" style="padding: 10px">
+                                  <p class="negrita">Imagen</p>
+                                  
+                                  <script>
+                                        ampliarImagen("0_assets/curso/imagenes/ilustrativas/chica.jpg", "ID_popup", "Imagen de una chica fregando", "Imagen de una chica fregando", 80);
+                                  </script>            
+
+                            </div>
+                            <div class="tile noImprimir">
+                                <div class="imgRespons"><a id="comprueba" class="comprobar" onclick="resuelve()"><img id="imagen" src="0_assets/curso/imagenes/ejercicios/svg/book.png" alt="Comprobar" class="tabulable tile-image big-illustration comprobar disabled-clicks" style="height: 40px; width: 40px; margin: 2px 0px; margin-bottom: 2px;">
+                                    <p style="margin: 0px 0px; margin-bottom: 2px; font-weight: bold; text-align:center">Comprobar</p></a>
+                                </div>
+                                <div class="imgRespons"><a id="reinicia" class="reiniciar" onclick="reiniciar()"><img src="0_assets/curso/imagenes/ejercicios/svg/pencils.png" alt="Reiniciar" class="tabulable tile-image big-illustration reiniciar" style="height: 40px; width: 40px; margin: 2px 0px; margin-bottom: 2px;">
+                                    <p style="margin: 0px 0px; margin-bottom: 2px; font-weight: bold; text-align:center">Reiniciar</p></a>
+                                </div>
+                                <div class="imgRespons"><a id="resuelve" class="resolver" onclick="soluciona()"><img src="0_assets/curso/imagenes/ejercicios/svg/gift-box.png" alt="Resolver" class="tabulable tile-image big-illustration resolver" style="height: 40px; width: 40px; margin: 2px 0px; margin-bottom: 2px;">
+                                    <p style="margin: 0px 0px; margin-bottom: 2px; font-weight: bold; text-align:center">Resolver</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="tile panel-actividad">
+                              
+                              
+<form class="cont">
+
+  <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          
+          <input id="pregunta1" type="checkbox" name="Arnés" value="0"><label for="pregunta1" style="cursor: pointer;" class=""><span>Arnés</span></label>
+            <div class="clear"></div>
+
+            <input id="pregunta2" type="checkbox" name="Protección ocular" value="1"><label for="pregunta2" style="cursor: pointer;" class=""><span>Protección ocular</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta3" type="checkbox" name="Protección de las vías respiratorias" value="1"><label for="pregunta3" style="cursor: pointer;" class=""><span>Protección de las vías respiratorias</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta4" type="checkbox" name="Máscara" value="0"><label for="pregunta4" style="cursor: pointer;" class=""><span>Máscara</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta5" type="checkbox" name="Mascarilla" value="1"><label for="pregunta5" style="cursor: pointer;" class=""><span>Mascarilla</span></label> 
+                      <div class="clear"></div>
+
+
+
+        </div>
+
+
+
+
+        <div class="row col-md-6 col-sm-6 col-xs-6">
+          
+            <input id="pregunta6" type="checkbox" name="Mascarilla autofiltrante" value="0"><label for="pregunta6" style="cursor: pointer;" class=""><span>Mascarilla autofiltrante</span></label> 
+                <div class="clear"></div>
+
+            <input id="pregunta7" type="checkbox" name="Boquilla" value="0"><label for="pregunta7" style="cursor: pointer;" class=""><span>Boquilla</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta8" type="checkbox" name="Guantes" value="1"><label for="pregunta8" style="cursor: pointer;" class=""><span>Guantes</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta9" type="checkbox" name="Zapatos" value="1"><label for="pregunta9" style="cursor: pointer;" class=""><span>Zapatos</span></label> 
+                      <div class="clear"></div>
+
+            <input id="pregunta10" type="checkbox" name="Uniforme" value="1"><label for="pregunta10" style="cursor: pointer;" class=""><span>Uniforme</span></label> 
+
+
+
+        </div>
+  </div>
+
+</form>
+
+<div class="clear"></div>
+<div class="clear"></div>
+
+<p>En la imagen hay un elemento más del que no hemos hablado y que se utiliza sobre todo en ámbitos ruidosos, son los:</p>
+
+<div style="margin:0 auto;">        
+          <div class="casillaNoInput pTurquesa">T</div>
+          <input class="casillaInput" maxlength="1" onkeyup="a_validar(this,'a',1)" tabindex="1">
+          <input class="casillaInput" maxlength="1" onkeyup="a_validar(this,'p',1)" tabindex="2">
+          <div class="casillaNoInput pTurquesa">O</div>
+          <div class="casillaNoInput pTurquesa">N</div>
+          <input class="casillaInput" maxlength="1" onkeyup="a_validar(this,'e',1)" tabindex="3">
+          <input class="casillaInput" maxlength="1" onkeyup="a_validar(this,'s',1)" tabindex="4">
+      </div>
+        
+
+
+
+                            </div>
+                            <!-- Aquí termina la actividad -->
+                        </div>
+                        <button type="button" class="btn" id="actSolucionCorrecto"></button>
+                        <button type="button" class="btn" id="actSolucionIncorrecto"></button>
+                    </div>
+                    <div class="clear"></div>
+
+
+
+
+
+
+<!-- final del contenido -->
+                    
+
+<div class="clear"></div>
+                </div>
+                <!-- fin div contenido -->
+    </div>  <!-- fin div centro-aux -->
+  </div>  <!-- fin div centro-->
+
+
+
+    <!-- Explicacion Ejercicio -->
+
+
+    <script type="text/javascript" src="0_assets/curso/js/actividades/multiopcion.js"></script>
+
+
+
+    <script>
+        document.querySelector('#actSolucionCorrecto').onclick = function() {
+            swal("¡Enhorabuena!", "Has completado la actividad", "success");
+        };
+        document.querySelector('#actSolucionIncorrecto').onclick = function() {
+            swal("¡Error!", "Las respuestas no son las correctas", "error");
+        };
+    </script>
+
+
+
+
+
+
+</div>  <!-- Fin diapositiva -->
+
+</body>
+</html>

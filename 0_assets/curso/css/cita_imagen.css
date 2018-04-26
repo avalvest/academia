@@ -1,0 +1,77 @@
+body {
+  
+  font: 1.4em Helvetica;
+  font-weight: 200;
+  -webkit-backface-visibility: hidden;
+}
+
+.comic-pane {
+  width: 800px;
+  height: 220px;
+  position: relative;
+  margin: 0px auto;
+  overflow: hidden;
+}
+
+.text {
+  width: 520px;
+  height: 200px;
+  position: absolute;
+  left: 37px;
+  transform: skew(-15deg);
+  background: #fafafa;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.text:before {
+  content: "";
+  dislay: block;
+  position: absolute;
+  height: 200px;
+  width: 40px;
+  left: -137px;
+  transform: skew(15deg);
+  background: #fafafa;
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-backface-visibility: hidden;
+}
+
+.text p {
+  width: 430px;
+  line-height: 1.2em;
+  margin-top: 60px;
+  margin-left: 30px;
+  transform: skew(15deg);
+}
+
+.comic-image {
+  width: 320px;
+  height: 200px;
+  right: -90px;
+  top: 0;
+  transform: skew(-15deg);
+  position: absolute;
+  overflow: hidden;
+}
+
+.cimg {
+  display: block;
+  transform: skew(15deg);
+  width: 290px;
+  height: 200px;
+  position: absolute;
+  left: -27px;
+  top: 0;
+  background: url(../imagenes/ilustrativas/cat.png);
+  background-size: cover;
+}
+
+  @media only screen and (max-width:1050px){
+ 
+
+ .comic-pane{ display: none !important; }
+ .testimonial{ display: inline !important; }
+
+
+}

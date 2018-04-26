@@ -1,0 +1,70 @@
+.contenedor-loader {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    margin-bottom: 30px;
+    background: url(../imagenes/fondo000.png) center center;
+    background-size: cover;
+    background-color: #f3f7f9;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.loader.loader-default {
+    width: 10em;
+    height: 10em;
+    background-color: #a3afb7;
+    border-radius: 100%;
+    -webkit-animation: loader-default 1s infinite ease-in-out;
+    -o-animation: loader-default 1s infinite ease-in-out;
+    animation: loader-default 1s infinite ease-in-out;
+}
+
+.loader {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 40px;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.vertical-align-middle {
+    vertical-align: middle;
+}
+
+.vertical-align-bottom, .vertical-align-middle {
+    display: inline-block;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.vertical-align:before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: "";
+}
+
+#mensajeCargando {
+  color: #76838f;
+  font-size: 1.5em;
+}
+
+@keyframes loader-default {
+    0% {
+        -webkit-transform: scale(0);
+        -o-transform: scale(0);
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1);
+        -o-transform: scale(1);
+        transform: scale(1);
+    }
+}

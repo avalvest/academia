@@ -1,0 +1,188 @@
+/*! leafbox 1.00 | Daniel Abel - http://zkreations.com | Free to use under terms of MIT license */
+
+/*Para empezar, lbox necesita una posicion fija y ocupar todo su contenedor*/
+
+#mapaCurso.lbox > .text {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+.lbox {
+    position: fixed;
+    overflow: hidden;
+    background: rgba(0,0,0,0.8);
+    z-index: 9999;
+    -webkit-font-smoothing: antialiased;
+    visibility: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    -ms-flex-align: center;
+}
+}
+/*todas las transiciones (si tuviera más)*/
+.lbox.fade:target > img {
+    -webkit-transition: opacity 1s;
+       -moz-transition: opacity 1s;
+         -o-transition: opacity 1s;
+            transition: opacity 1s;
+}
+
+/*Para no repetir codigo, lo agrupamos aquí*/
+.lbox, .lbox > img, .lbox > div {top: 0;left: 0;right: 0;bottom: 0;}
+
+/*Al dar clic, el contenedor lbox que se encuentre "target" se mostrará*/
+.lbox:target {top: 0;visibility: visible;}
+
+/*y creamos un boton para cerrarlo*/
+.lbox > a {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: url(../imagenes/plantilla/iconos/close1x-bw.png) no-repeat center center rgba(0,0,0,0);
+    background-size: 40px;
+}
+.lbox > a:hover {
+    transform: scale(1.2);
+}
+/*tanto los videos como las imágenes necesitan una posicion absoluta*/
+.lbox > img, .lbox > div {
+    position: relative;
+    margin: auto;
+    box-shadow: 0 3px 3px -1px rgba(0, 0, 0, 0.3), 0 1px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+/*Perto solo las imágenes tienen un maximo en alto y ancho*/
+.lbox > img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/*mientras que los videos tienen su propio ancho y alto*/
+.lbox > .vid {
+    max-width: 800px;
+    height: 450px;
+    width:100%;
+}
+
+/*y los textos tambien*/
+.lbox > .text {
+    max-width: 80%;
+    max-height: 95%;
+    padding: 20px;
+    background: #fff;
+    color: #757575;
+    overflow-y: scroll;
+    cursor: initial;
+      cursor: default;
+flex-direction: row;
+-webkit-flex: 0 1 auto;
+flex: 0 1 auto;
+-webkit-transition: width 0.7s ease-out;
+transition: width 0.7s ease-out;
+
+
+}
+
+.lbox > .vid iframe, .lbox > .vid object, .lbox > .vid embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*Pero aparecen según el efecto*/
+
+/*fade*/
+.lbox.fade > img, .lbox.fade > div {
+    opacity: 0;
+}
+.lbox.fade:target > img, .lbox.fade:target > div {
+    opacity: 1;
+}
+
+/*bounce*/
+@-webkit-keyframes bounce {
+    0% {-webkit-transform: scale(0)}
+    50% {-webkit-transform: scale(1.1)}
+    100% {-webkit-transform: scale(1)}
+}
+@-moz-keyframes bounce {
+    0% {-moz-transform: scale(0)}
+    50% {-moz-transform: scale(1.1)}
+    100% {-moz-transform: scale(1)}
+}
+@keyframes bounce {
+    0% {transform: scale(0)}
+    50% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+}
+
+.lbox.bounce:target > img, .lbox.bounce:target > div {
+    -webkit-animation: bounce 1s none;
+       -moz-animation: bounce 1s none;
+         -o-animation: bounce 1s none;
+            animation: bounce 1s none;
+}
+
+/*flip*/
+@-webkit-keyframes flip {
+    0% {-webkit-transform: perspective(600px) rotate3d(1, 0, 0, 20deg);opacity: 0;}
+    50% {-webkit-transform: perspective(600px) rotate3d(1, 0, 0, -5deg);opacity: 1;}
+    100% {-webkit-transform: perspective(600px) rotate3d(1, 0, 0, 0);opacity: 1;}
+}
+@-moz-keyframes flip {
+    0% {-moz-transform: perspective(600px) rotate3d(1, 0, 0, 20deg);opacity: 0;}
+    50% {-moz-transform: perspective(600px) rotate3d(1, 0, 0, -5deg);opacity: 1;}
+    100% {-moz-transform: perspective(600px) rotate3d(1, 0, 0, 0);opacity: 1;}
+}
+@keyframes flip {
+    0% {transform: perspective(600px) rotate3d(1, 0, 0, 20deg);opacity: 0;}
+    50% {transform: perspective(600px) rotate3d(1, 0, 0, -5deg);opacity: 1;}
+    100% {transform: perspective(600px) rotate3d(1, 0, 0, 0);opacity: 1;}
+}
+
+.lbox.flip:target > img, .lbox.flip:target > div {
+    -webkit-animation: flip 1s none;
+       -moz-animation: flip 1s none;
+         -o-animation: flip 1s none;
+            animation: flip 1s none;
+}
+
+/*Algunos estilos para videos según la resolución*/
+@media only screen and (max-width: 840px) {
+.lbox > .vid {height: 400px;}
+}
+@media only screen and (max-width: 730px) {
+.lbox > .vid {height: 350px;}
+}
+@media only screen and (max-width: 620px) {
+.cream-slider li.tab > div {display: none;}
+.lbox > .vid {height: 300px;}
+}
+
+/* MODIFICACIONES */
+#mapa.lbox > .text, #ayuda.lbox > .text {
+max-width: 95%;
+max-height: 95%;
+
+}
+.imagenModal.lbox > .text {
+max-width:-moz-fit-content;
+max-width:-webkit-fit-content;
+max-width:-ms-fit-content;
+text-align: center;
+overflow: hidden;
+max-width: 95%;
+max-height: 95%;
+}
+.text h2 {
+    text-align: center !important;
+    margin-bottom: 10px !important;
+}

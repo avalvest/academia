@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>4.7 Manejo seguro de útiles y herramientas.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="0_assets/curso/css/style.css">
+    
+    <style>
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row content">
+        
+        
+        <h4><small></small></h4>
+        <div id="barratop" class="navbar navbar-fixed-top col-sm-12">
+          
+          <div class="col-sm-12 btn-group">
+            <button id="btnmaszoom" type=button class="btn btn-primary btn-sm pull-right" onclick="zoom(1)">
+            
+            <span class="glyphicon glyphicon-zoom-in"></span>
+            </button>
+            
+            <button id="btnmenoszoom" type=button class="btn btn-primary btn-sm pull-right" onclick="zoom(-1)">
+            
+            <span class="glyphicon glyphicon-zoom-out"></span>
+            </button>
+          </div>
+        </div>
+        <br>
+        <h2>Sobresfuerzos y ergonomía</h2>
+        <hr style=" border: 0; height: 1px; background: rgba(15,157,88,.8); background-image: linear-gradient(to right, cyan, #333, #ccf);"> 
+        <br>
+        <div class="test"><p class="container text-justify"><b><ins>Sobresfuerzos y ergonomía</ins></b> <br><br>
+          Durante la jornada laboral nos veremos obligados a <b>mover cargas pesadas</b>, bien sean máquinas que vamos a usar, muebles que tenemos que mover para poder trabajar o bien cubos de agua o de residuos, etc. <br>
+
+          Los <b>sobresfuerzos</b> pueden producir <b>lesiones</b> muy dolorosas como lesiones musculares, principalmente de espalda:
+
+        </p>
+        
+        <br>
+        <ul>
+          <li class="paddingli" style="list-style-type:circle">Tirones.</li>
+          <li class="paddingli" style="list-style-type:circle">Desgaste de discos.</li>
+        <li class="paddingli" style="list-style-type:circle">Hernias.</li>
+      <li class="paddingli" style="list-style-type:circle">Etc.</li></ul>
+          <ul><b>Recomendaciones importantes:</b>
+            
+            <li class="paddingli" style="list-style-type:circle">Siempre que sea posible, utilizar carros para manipular y transportar cargas.</li>
+            <li class="paddingli" style="list-style-type:circle">Los carros hay que empujarlos, no tirar de ellos.</li>
+            <li class="paddingli" style="list-style-type:circle">Cuando las cargas son muy pesadas y no contamos con la ayuda de maquinaria para transporte, pedir ayuda a un compañero.</li>
+            <li class="paddingli" style="list-style-type:circle">Si tenemos que desplazar cargas, se recomienda aumentar la frecuencia disminuyendo la intensidad de los esfuerzos, es decir, más viajes con menos carga.</li>
+             </ul><br>
+             
+<div class="tab">
+  <button style="background-color:#d6e9c6;" class="tablinks" onclick="abrir(event, 'barriendo')">La espalda barriendo y fregando</button>
+  <button style="background-color:#d6e9c6;" class="tablinks" onclick="abrir(event, 'aspirando')">La espalda pasando la aspiradora</button>
+  <button style="background-color:#d6e9c6;" class="tablinks" onclick="abrir(event, 'limpiando')">La espalda limpiando cristales</button>
+</div>
+
+<!-- Tab content -->
+<div id="barriendo" class="tabcontent">
+  <h5><b>La espalda barriendo y fregando</b></h5>
+  <p class="row col-sm-7">Uno de los factores que más afecta a la ergonomía del personal limpiador es la longitud del palo de escoba o fregona. Con un palo más corto tendemos a arquear más la espalda afectando la zona lumbar, por lo tanto deberemos tener un palo lo suficientemente largo como para que, en una posición erguida, alcance el suelo. 
+La postura correcta a la hora de barrer o fregar incluye mantener la espalda recta, una mano sujeta la escoba a la altura de la cadera y la otra lo hace a la altura del pecho. Es importante que no hagamos estiramientos extraños para limpiar zonas más alejadas, limpiaremos alrededor de nosotros mismos y siempre moviendo el cuerpo, es decir, sin hacer giros bruscos de cintura.
+</p><img src="0_assets/imagenes/figura_barrer.jpg" alt="" class="row col-sm-5" style="float:right;">
+</div>
+
+<div id="aspirando" class="tabcontent" style="clear:both;">
+  <h5><b>La espalda pasando la aspiradora</b></h5>
+  <p class="row col-sm-7">Tendremos que adoptar la misma postura para pasar la aspiradora que cuando barremos, pero si nos tenemos que agachar, lo haremos doblando y apoyando una rodilla en el suelo y manteniendo la espalda recta. <br>
+Como en el caso de barrer o fregar, vigilaremos que la columna esté siempre erguida sin realizar giros bruscos.
+</p><img src="0_assets/imagenes/figura_aspirar.png" alt="" class="row col-sm-5" style="float:right;" >
+</div>
+
+<div id="limpiando" class="tabcontent" style="clear: both;">
+  <h5><b>La espalda limpiando los cristales</b></h5>
+  <div class="row"><div class="col-sm-7"><p>Cuando limpiemos los cristales, deberemos tener cuidado de no hacer escorzos ni movimientos bruscos. <br>
+Lo ideal sería invertir periódicamente la postura, sin embargo tendemos a limpiar con nuestra mano dominante, al hacerlo adelantaremos el pie del mismo lado y apoyaremos la mano contraria sobre el marco de la ventana a la altura del hombro buscando un mayor apoyo.
+<ul>Debemos asegurarnos de que:<li>El brazo que limpie tenga el codo flexionado.
+</li>
+  <li>Limpiar el área comprendida entre el nivel del pecho y el de los ojos.
+</li>
+  <li>Para limpiar por encima del nivel de los ojos, usaremos una escalera homologada y mantendremos una mano apoyada.
+</li>
+<li>Vigilaremos que nuestra columna esté recta y el peso repartido entre los pies y la mano que tengamos apoyada.
+</li></ul>
+</p></div><img src="0_assets/imagenes/figura_cristales.jpg" alt="" class="col-sm-5" style="float:right;">
+</div>
+</div>
+          </div>
+        </div>
+      </div>
+      <script src="0_assets/curso/js/funciones.js" type="text/javascript" charset="utf-8" defer></script>
+    </body>
+  </html>
